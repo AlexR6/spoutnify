@@ -48,4 +48,29 @@
       }
     }
   }
+  .container-playlist {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    a {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        width: 193px;
+        padding: 8px 24px;
+        color: #b3b3b3;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 330ms;
+
+        &.active {
+          color: #ffffff;
+        }
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+  }
 }

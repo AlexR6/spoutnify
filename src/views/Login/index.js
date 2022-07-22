@@ -17,17 +17,16 @@ const Index = () => {
       Math.floor(Date.now() / 1000) + 3600
     );
     getCurrentUserAuth().then((res) => {
-      console.log(res);
       const tmp = {
         id: res.data.id,
         display_name: res.data.display_name,
         country: res.data.country,
         followers: res.data.followers.total,
         image: res.data.images[0].url,
-        isConnected: true,
       };
       dispatch(setUser(tmp));
     });
+    window.location.href = "/";
   }
 
   return (

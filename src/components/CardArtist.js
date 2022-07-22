@@ -1,16 +1,15 @@
 import React from "react";
-import ArrowRight from "../assets/img/arrow-right-black.png";
+import Play from "../assets/img/play.png";
 
 const CardPlaylist = (props) => {
   const { id, img, name, type } = { ...props };
-  console.log(img);
   return (
     <div className="card-artist">
       <img src={img} />
       <h4>{name}</h4>
       <p>{type}</p>
       <div className="div-play">
-        <img src={ArrowRight} />
+        <img src={Play} />
       </div>
     </div>
   );

@@ -8,10 +8,9 @@ const NavBarTop = () => {
   const user = useSelector((state) => state.user);
 
   const handleLogout = () => {
-    dispatch(setUser({ isConnected: false }));
     window.localStorage.removeItem("access_token");
     window.localStorage.removeItem("date_expires_access_token");
-    window.location.href = "/";
+    window.location.href = "/login";
   };
 
   return (

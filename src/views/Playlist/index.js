@@ -4,6 +4,7 @@ import { convertMsToTime } from "../../utils/convertMs";
 import CardTrackPlayer from "../../components/CardTrackPlayer";
 import "../../assets/styles/playlist.scss";
 import Time from "../../assets/img/time.png";
+import NoPictureForPlaylist from "../../assets/img/no-picture-for-playlist.png";
 
 const Index = () => {
   const [tracks, setTracks] = useState([]);
@@ -25,7 +26,11 @@ const Index = () => {
               currentPlaylistTmp.tracks.total - 1;
           }
         });
-        console.log(currentPlaylistTmp);
+        if (currentPlaylistTmp.images[0]) {
+          currentPlaylistTmp.image = currentPlaylistTmp.images[0].url;
+        } else {
+          currentPlaylistTmp.image = NoPictureForPlaylist;
+        }
         setCurrentPlaylist(currentPlaylistTmp);
         setTracks(res.data.tracks.items);
         setDuration(convertMsToTime(durationTmp));
@@ -39,7 +44,7 @@ const Index = () => {
         <>
           <div className="container-header">
             <div className="container-img">
-              <img src={currentPlaylist.images[0].url} alt="" />
+              <img src={currentPlaylist.image} alt="" />
             </div>
             <div className="container-text">
               <p>Playlist</p>

@@ -8,5 +8,12 @@ export function convertMsToTime(ms) {
 export function convertMsToMin(ms) {
   const seconds = Math.floor(ms / 1000);
   const minutes = Math.floor(seconds / 60);
-  return (minutes % 60) + ":" + (seconds % 60);
+  return (
+    (minutes % 60) +
+    ":" +
+    (seconds % 60).toLocaleString("fr-FR", {
+      minimumIntegerDigits: 2,
+      useGrouping: false,
+    })
+  );
 }

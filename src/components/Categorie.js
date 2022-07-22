@@ -17,12 +17,6 @@ const Categorie = (props) => {
     <div className="container-categorie">
       <div className="title-and-link">
         <h3 className="title-categorie">{name}</h3>
-        <NavLink
-          to={`/categorie/all-playlist/${id}`}
-          className="link-categorie"
-        >
-          VOIR TOUT
-        </NavLink>
       </div>
       <div className="container-playlist">
         {playlists.map((playlist) => {

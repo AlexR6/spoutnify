@@ -10,7 +10,6 @@ const Index = () => {
   const handleSubmit = (e) => {
     if (e.code == "Enter" && searchText) {
       getHitSearch(searchText).then((res) => {
-        console.log(res);
         setSearchResult(res.data.artists.items);
       });
     }
@@ -27,7 +26,7 @@ const Index = () => {
       <div className="container-artist">
         {searchResult &&
           searchResult.map((res) => {
-            if (res.images) {
+            if (res.images[0]) {
               return (
                 <CardArtist
                   key={res.id}

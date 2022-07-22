@@ -8,17 +8,14 @@ export const userSlice = createSlice({
     country: null,
     followers: 0,
     image: null,
-    isConnected: false,
   },
   reducers: {
     setUser: (state, action) => {
-      console.log(action);
       state.id = action.payload.id;
       state.display_name = action.payload.display_name;
       state.country = action.payload.country;
       state.followers = action.payload.followers;
       state.image = action.payload.image;
-      state.isConnected = action.payload.isConnected;
     },
   },
 });
