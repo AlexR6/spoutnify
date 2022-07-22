@@ -1,0 +1,94 @@
+.container-current-playlist {
+  margin-top: -64px;
+  .container-header {
+    display: flex;
+    align-items: end;
+    padding: 0 32px 24px;
+    min-height: 340px;
+    .container-img {
+      margin-right: 24px;
+      max-width: 232px;
+      img {
+        width: 100%;
+      }
+    }
+    .container-text {
+      color: #ffffff;
+      font-weight: 700;
+      p:nth-child(1) {
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+      p:nth-child(2) {
+        font-size: 96px;
+        font-weight: 900;
+        transform: translateX(-6px);
+        padding: 8px 0;
+      }
+      p:nth-child(3) {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 7px;
+      }
+      p:nth-child(4) {
+        font-size: 14px;
+      }
+    }
+  }
+  .container-tracks {
+    color: #ffffff;
+    .container-top {
+      grid-gap: 16px;
+      display: grid;
+      grid-template-columns: [index] 16px [first] 4fr [var1] 2fr [last] minmax(
+          120px,
+          0.8fr
+        );
+      max-width: 1580px;
+      padding: 0 16px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+    }
+    .container-bottom {
+      .card-track-player {
+        padding: 0 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        grid-gap: 16px;
+        display: grid;
+        height: 56px;
+        grid-template-columns: [index] 16px [first] 4fr [var1] 2fr [last] minmax(
+            120px,
+            1fr
+          );
+        .container-img-artist {
+          display: flex;
+          img {
+            margin-right: 16px;
+            width: 40px;
+            transform: translateY(8px);
+          }
+        }
+        &:hover {
+          background-color: hsla(0, 0%, 100%, 0.2);
+        }
+        .position {
+          height: 0;
+          transform: translateY(22px);
+        }
+        .name-artist {
+          height: 0;
+          transform: translateY(15px);
+        }
+        .name-album {
+          height: 0;
+          transform: translateY(21px);
+        }
+        .durations {
+          height: 0;
+          transform: translateY(21px);
+        }
+      }
+    }
+  }
+}

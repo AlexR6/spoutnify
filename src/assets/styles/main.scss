@@ -1,0 +1,19 @@
+@import "./modules/reset";
+@import "./modules/navbar-left";
+@import "./modules/navbar-top";
+body {
+  font-family: "Lato", sans-serif;
+  background: #000000;
+}
+button {
+  font-family: inherit;
+}
+.container-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container-right {
+  width: 100%;
+}
