@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
 import { getCategoriePlaylist } from "../services/categoriesService";
 import CardPlaylist from "./CardPlaylist";
 
 const Categorie = (props) => {
   const [playlists, setPlaylists] = useState([]);
   const [loading, setLoading] = useState(1);
-  const { id, icon, name } = { ...props };
+  const { id, name } = { ...props };
 
   useEffect(() => {
     getCategoriePlaylist(id)

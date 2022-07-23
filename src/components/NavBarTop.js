@@ -1,10 +1,8 @@
 import React from "react";
 import DownwardArrow from "../assets/img/downward-arrow.png";
 import { useDispatch, useSelector } from "react-redux";
-import { setUser } from "../redux/user";
 
 const NavBarTop = () => {
-  const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
 
   const handleLogout = () => {

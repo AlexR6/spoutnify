@@ -8,7 +8,6 @@ import { getCurrentUserAuth } from "./services/userService";
 function App() {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(1);
-
   useEffect(() => {
     if (window.localStorage.getItem("access_token")) {
       if (ifIsNecessaryToGetNewAccessToken()) {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -71,7 +71,9 @@ const Routing = () => {
               </Routes>
             </div>
           </div>
-          <Player />
+          <div className="container-player">
+            <Player />
+          </div>
         </>
       ) : (
         <Routes>

@@ -18,6 +18,7 @@ const Index = () => {
       .then((res) => {
         let durationTmp = 0;
         let currentPlaylistTmp = res.data;
+
         res.data.tracks.items.map((item) => {
           if (item.track != null) {
             durationTmp += parseInt(item.track.duration_ms, 10);
@@ -85,6 +86,7 @@ const Index = () => {
                     nameAlbum={track.track.album.name}
                     nameArtist={artistTmp}
                     nameTrack={track.track.name}
+                    trackUri={track.track.uri}
                   />
                 );
               })}

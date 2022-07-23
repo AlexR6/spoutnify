@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { getHitSearch } from "../../services/searchService";
 import CardArtist from "../../components/CardArtist";
 import "../../assets/styles/search.scss";

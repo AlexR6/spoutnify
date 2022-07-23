@@ -1,19 +1,25 @@
 .container-player {
-  height: 100px;
-  background: red;
   bottom: 0;
   position: fixed;
   left: 0;
   right: 0;
-  display: flex;
-  justify-content: space-between;
-  .container-img{
-
-  }
-  .container-manage{
-
-  }
-  .container-volume {
-
+  .PlayerRSWP {
+    background-color: #181818 !important;
+    padding-top: 15px;
+    border-top: 1px solid #282828;
+    ._SliderRSWP {
+      > div {
+        width: 600px !important;
+        margin: 0 auto;
+        > div {
+          border-radius: 5px !important;
+        }
+      }
+    }
+    .__1d63smy {
+      > div {
+        background-color: #181818 !important;
+      }
+    }
   }
 }

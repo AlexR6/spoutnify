@@ -8,6 +8,9 @@ body {
 button {
   font-family: inherit;
 }
+#root {
+  position: relative;
+}
 .container-main {
   display: flex;
   flex-direction: row;
